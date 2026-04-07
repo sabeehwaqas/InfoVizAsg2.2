@@ -7,9 +7,7 @@ import matplotlib.patches as mpatches
 import networkx as nx
 import pandas as pd
 
-# SDG edge list 
-# Edges represent perceived interconnections between the 17 SDGs.
-# My SDG is 13 
+# SDG edge list, Edges represent perceived interconnections between the 17 SDGs. My SDG is 13 
 edges = [
     # Climate action (13)
     (13,  7), (13,  9), (13, 11), (13, 12), (13, 14), (13, 15), (13,  1), (13,  2), (13,  3), (13,  6),
@@ -28,7 +26,7 @@ edges = [
     # Partnerships
     (17, 13), (17,  1), (17,  9),
 ]
-# De-duplicate
+# Deduplicate
 edges = list(set(tuple(sorted(e)) for e in edges))
 print(f"Total edges: {len(edges)}")
 
