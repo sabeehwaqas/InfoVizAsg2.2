@@ -7,25 +7,25 @@ import matplotlib.patches as mpatches
 import networkx as nx
 import pandas as pd
 
-#  SDG edge list (25–50 undirected edges) 
+# SDG edge list 
 # Edges represent perceived interconnections between the 17 SDGs.
-# My SDG is 13 (Climate Action), so it's the most connected node.
+# My SDG is 13 
 edges = [
-    # Climate Action (13) connects broadly
+    # Climate action (13)
     (13,  7), (13,  9), (13, 11), (13, 12), (13, 14),
     (13, 15), (13,  1), (13,  2), (13,  3), (13,  6),
-    # Poverty & basic needs cluster
+    # Poverty and basic needs cluster
     ( 1,  2), ( 1,  3), ( 1,  8), ( 1, 10),
     ( 2,  3), ( 2,  6), ( 2, 12), ( 2, 15),
-    # Health & wellbeing
+    # Health and wellbeing
     ( 3,  6), ( 3, 10),
     # Education
     ( 4,  5), ( 4,  8), ( 4, 10), ( 4, 16),
-    # Energy & Industry
+    # Energy and Industry
     ( 7,  9), ( 7, 11),
-    # Cities & consumption
+    # Cities and consumption
     (11, 12), (12, 14),
-    # Oceans & land
+    # Oceans and land
     (14, 15),
     # Partnerships
     (17, 13), (17,  1), (17,  9),
@@ -34,7 +34,7 @@ edges = [
 edges = list(set(tuple(sorted(e)) for e in edges))
 print(f"Total edges: {len(edges)}")
 
-# SDG names (short), made myself
+# SDG names short 
 sdg_names = {
     1:'No Poverty', 2:'Zero Hunger', 3:'Good Health', 4:'Quality Education',
     5:'Gender Equality', 6:'Clean Water', 7:'Clean Energy', 8:'Decent Work',
